@@ -1,0 +1,16 @@
+//
+//  Config.xcconfig
+//  TestFramework
+//
+//  Created by Bari Levi on 7/15/15.
+//  Copyright (c) 2015 Bari. All rights reserved.
+//
+
+//J2OBJC_HOME = ${SRCROOT}/../j2objc-dist;
+J2OBJC_HOME = /Users/barilevi/dev_libs/j2objc-0.9.7;
+
+HEADER_SEARCH_PATHS = $(inherited) "${J2OBJC_HOME}/include" "${DERIVED_FILES_DIR}";
+LIBRARY_SEARCH_PATHS = $(inherited) "${J2OBJC_HOME}/lib";
+OTHER_LDFLAGS = $(inherited) -l"z" -l"jre_emul" -l"icucore";
+USER_HEADER_SEARCH_PATHS = $(inherited) "${J2OBJC_HOME}/include" "${DERIVED_FILES_DIR}"
+ALWAYS_SEARCH_USER_PATHS = YES
